@@ -41,7 +41,7 @@ class Gem::Ext::Builder
 
     destdir = '"DESTDIR=%s"' % ENV['DESTDIR'] if RUBY_VERSION > '2.0'
 
-    ['clean', '', 'install'].each do |target|
+    ['clean', '', 'install', 'distclean'].each do |target|
       # Pass DESTDIR via command line to override what's in MAKEFLAGS
       cmd = [
         make_program,
